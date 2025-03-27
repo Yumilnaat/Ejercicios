@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temas Pweb BackEnd</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Temario: Programacion Web BackEnd 💻📝</h1>
+    
+    <form id="Form" class="buttons">
+        <button type="button" data-type="1">1️⃣</button>
+        <button type="button" data-type="2">2️⃣</button>
+        <button type="button" data-type="3">3️⃣</button>
+        <button type="button" data-type="4">4️⃣</button>
+        <button type="button" data-type="5">5️⃣</button>
+    </form>
+    
+    <div id="Container"></div>
+    
+    <script>
+        document.querySelectorAll("#Form button").forEach(button => {
+          button.addEventListener("click", async (event) => {
+            const type = event.target.getAttribute("data-type"); // Corregido: no usar toLowerCase()
+            
+            try {
+                const response = await fetch(`/tema/${type}`);
+                const tema = await response.json();
+    
+                const contenedor = document.getElementById("Container"); 
+
+                if (tema.error) {
+                    contenedor.innerHTML = "<h2>Tema no encontrado</h2>";
+                } else {
+                    contenedor.innerHTML = `
+                        <h2>${tema.Nombre}</h2> 
+                        <p><strong>Descripción:</strong> ${tema.Descripción}</p>
+                        <h3>Palabras Claves:</h3>
+                        <ul>
+                            ${tema["Palabras claves"].map(palabra => `<li>${palabra}</li>`).join("")}
+                        </ul>
+                        <h3>Prácticas:</h3>
+                        <ul>
+                            ${tema.Prácticas.map(practica => `
+                                <li>
+                                    <strong>${practica.Título}</strong>: ${practica.Descripción}
+                                    <br><em>Objetivo:</em> ${practica.Objetivo}
+                                </li>
+                            `).join("")}
+                        </ul>`;
+                }
+            } catch (error) {
+                console.error("Error al obtener el tema:", error);
+                document.getElementById("Container").innerHTML = "<h2>Error al cargar el tema</h2>";
+            }
+          });
+        });
+    </script>
+</body>
+</html>

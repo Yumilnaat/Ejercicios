@@ -1,0 +1,78 @@
+{
+    "asignatura": "Programación web del lado del servidor",
+    "SATCA": "2-3-5",
+    "carrera": "Ingeniería en Sistemas Computacionales",
+    "temas": [
+      {
+        "ID": 1,
+        "Nombre": "Lenguajes de programación y frameworks del lado del servidor",
+        "Descripción": "Introducción a los lenguajes y frameworks utilizados en el desarrollo del lado del servidor.",
+        "Palabras claves": ["Lenguajes", "Frameworks", "Variables", "Funciones", "Excepciones"],
+        "Prácticas": [
+          {
+            "Título": "Configuración del entorno",
+            "Descripción": "Instalar y configurar un entorno de desarrollo para programar en el lado del servidor.",
+            "Objetivo": "Familiarizarse con el uso de herramientas de desarrollo."
+          },
+          {
+            "Título": "Manejo de excepciones",
+            "Descripción": "Implementar estructuras de control de errores en un lenguaje del lado del servidor.",
+            "Objetivo": "Comprender cómo manejar errores en aplicaciones web."
+          }
+        ]
+      },
+      {
+        "ID": 2,
+        "Nombre": "Desarrollo de API",
+        "Descripción": "Conceptos y prácticas para la creación de APIs en aplicaciones web.",
+        "Palabras claves": ["API", "HTTP", "Autenticación", "Rutas"],
+        "Prácticas": [
+          {
+            "Título": "Creación de una API básica",
+            "Descripción": "Desarrollar una API REST utilizando Express y Node.js.",
+            "Objetivo": "Comprender el flujo de trabajo de una API."
+          }
+        ]
+      },
+      {
+        "ID": 3,
+        "Nombre": "Bases de datos en aplicaciones web",
+        "Descripción": "Uso de bases de datos en aplicaciones web para el almacenamiento y recuperación de datos.",
+        "Palabras claves": ["Bases de datos", "SQL", "NoSQL", "Consultas"],
+        "Prácticas": [
+          {
+            "Título": "Conexión a una base de datos",
+            "Descripción": "Configurar y conectar una base de datos MySQL a una aplicación web.",
+            "Objetivo": "Familiarizarse con la integración de bases de datos en servidores web."
+          }
+        ]
+      },
+      {
+        "ID": 4,
+        "Nombre": "Pruebas y optimización",
+        "Descripción": "Estrategias para probar y mejorar el rendimiento de aplicaciones web.",
+        "Palabras claves": ["Pruebas", "Optimización", "Seguridad"],
+        "Prácticas": [
+          {
+            "Título": "Pruebas unitarias",
+            "Descripción": "Implementar pruebas unitarias en una aplicación web.",
+            "Objetivo": "Garantizar la funcionalidad del código mediante pruebas automatizadas."
+          }
+        ]
+      },
+      {
+        "ID": 5,
+        "Nombre": "Implementación y despliegue",
+        "Descripción": "Proceso de publicación de una aplicación web en un entorno de producción.",
+        "Palabras claves": ["Despliegue", "CI/CD", "Administración de servidores"],
+        "Prácticas": [
+          {
+            "Título": "Despliegue en un servidor",
+            "Descripción": "Publicar una aplicación web en un servicio de hosting en la nube.",
+            "Objetivo": "Comprender el proceso de despliegue de aplicaciones web."
+          }
+        ]
+      }
+    ]
+  }
+  
